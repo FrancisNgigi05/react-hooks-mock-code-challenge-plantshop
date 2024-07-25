@@ -1,11 +1,11 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList( {plants} ) {
+function PlantList( {plants, onDelete, onUpdate} ) {
 
   const displayPlants = plants.map((plant, index) => {
     return (
-      <PlantCard key={index} plant={plant} />
+      <PlantCard key={index} plant={plant} onDelete={onDelete} onUpdate={onUpdate} />
     );
   });
 
